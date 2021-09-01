@@ -1,0 +1,8 @@
+<button (click)="handleClick()" class="text-xl">
+    <i class="fas fa-adjust" *ngIf="modeSwitcher.isAuto(); else notAuto"></i>
+
+    <ng-template #notAuto>
+        <i class="fas fa-moon" *ngIf="modeSwitcher.getMode() == 'dark'"></i>
+        <i class="fas fa-sun" *ngIf="modeSwitcher.getMode() == 'light'"></i>
+    </ng-template>
+</button>
